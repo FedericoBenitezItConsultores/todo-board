@@ -21,6 +21,7 @@ const TaskForm = () => {
 
   return (
     <div className={style.masquerade}>
+      <div className={style.mask}/>
       <div className={style.container}>
         <h2 className={style.popup_Form}>Popup Form</h2>
         <form onSubmit={handlerAddTasks} className={style.container_Popup}>
