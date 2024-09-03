@@ -4,11 +4,16 @@ import TaskForm from "./section/tasksForm/TaskForm";
 import ShowTasks from "./show-tasks/ShowTasks";
 
 function App() {
-  const [openPopUp, setOpenPopUp] = useState(false)
+  const [openPopUp, setOpenPopUp] = useState(true);
+
+  const toogleCreateTask = () => {
+    setOpenPopUp(!openPopUp);
+  };
+
   return (
     <>
-     {openPopUp && <TaskForm />}
-     <ShowTasks setOpenPopUp={setOpenPopUp}/>
+      {openPopUp && <TaskForm />}
+      <ShowTasks setOpenPopUp={setOpenPopUp} />
     </>
   );
 }
