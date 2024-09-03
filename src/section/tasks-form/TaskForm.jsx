@@ -9,7 +9,6 @@ const TaskForm = () => {
 
   const titleRef = useRef(null);
   const descripcionRef = useRef(null);
-  
 
   const handlerAddTasks = (e) => {
     e.preventDefault();
@@ -22,12 +21,13 @@ const TaskForm = () => {
 
   return (
     <div className={style.masquerade}>
-      <div className={style.mask}/>
+      <div className={style.mask} />
       <div className={style.container}>
         <h2 className={style.popup_Form}>Popup Form</h2>
         <form onSubmit={handlerAddTasks} className={style.container_Popup}>
           <label htmlFor="username">Título:</label>
           <input
+            placeholder="Ingresa el titulo"
             ref={titleRef}
             className={style.title_Popup}
             type="text"
@@ -36,9 +36,26 @@ const TaskForm = () => {
             required
           />
           <label htmlFor="username">Descripcion:</label>
-          <textarea ref={descripcionRef} name="" id="" required></textarea>
+          <textarea
+            placeholder="Agrega aqui las descripción"
+            className={style.description_Popup}
+            ref={descripcionRef}
+            name=""
+            id=""
+            required
+          ></textarea>
 
-          <button type="submit">Agregar Tarea</button>
+          <div className={style.buttons}>
+
+          <button className={style.open} type="submit">
+            Agregar Tarea
+          </button>
+          <button className={style.close} type="submit">
+            Cerrar
+          </button>
+
+          </div>
+
         </form>
       </div>
     </div>
