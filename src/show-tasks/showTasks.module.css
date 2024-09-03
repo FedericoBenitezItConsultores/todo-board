@@ -1,4 +1,8 @@
 .task_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
   border-radius: 8px;
 }
@@ -71,15 +75,17 @@
   background-color: #a2d2ff;
   color: #222;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.01s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   font-size: 32px;
+  width: 70px;
+  height: 8¿px;
 }
 
 .new_mas:hover {
-  transform: translateY(-5px);
   background-color: #bfd8f0;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }

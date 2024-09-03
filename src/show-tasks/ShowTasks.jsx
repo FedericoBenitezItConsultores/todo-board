@@ -7,6 +7,12 @@ const ShowTasks = ({ setOpenPopUp }) => {
   return (
     <div className={style.task_container}>
       <h2 className={style.title}>Lista de tareas</h2>
+      <li
+        onClick={() => setOpenPopUp(true)}
+        className={`${style.new_mas}`}
+      >
+        +
+      </li>
       {tasks.length === 0 ? (
         <p className={style.no_tasks}>No hay tareas disponibles</p>
       ) : (
@@ -20,12 +26,7 @@ const ShowTasks = ({ setOpenPopUp }) => {
               <p className={style.task_description}>{task.description}</p>
             </li>
           ))}
-      <li
-        onClick={() => setOpenPopUp(true)}
-        className={`${style.new_mas}`}
-      >
-        +
-      </li>
+    
         </ul>
       )}
     </div>
