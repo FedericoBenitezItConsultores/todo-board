@@ -18,7 +18,11 @@ const TaskForm = ({toggleCreateTask}) => {
       id: crypto.randomUUID(),
       description: descripcionRef.current.value,
     });
+<<<<<<< HEAD
     toggleCreateTask();
+=======
+    
+>>>>>>> d966203c6acea1767c58d5a013e340248077e843
   };
 
   return (
