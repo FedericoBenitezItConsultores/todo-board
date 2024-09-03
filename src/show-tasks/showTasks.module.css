@@ -1,0 +1,91 @@
+.task_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.no_tasks {
+  font-size: 18px;
+  color: #777;
+}
+
+.task_list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.task_item {
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.task_item:hover {
+  transform: translateY(-5px);
+}
+
+.task_title {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.task_description {
+  font-size: 16px;
+  color: #555;
+}
+
+.task_item0 {
+  background-color: #fde2e4;
+}
+
+.task_item1 {
+  background-color: #f9d5e5;
+}
+
+.task_item2 {
+  background-color: #e2f0cb;
+}
+
+.task_item3 {
+  background-color: #a2d2ff;
+}
+
+.task_item4 {
+  background-color: #ffc4d6;
+}
+
+.new_mas {
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #a2d2ff;
+  color: #222;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 32px;
+  width: 70px;
+  height: 8¿px;
+}
+
+.new_mas:hover {
+  background-color: #bfd8f0;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
