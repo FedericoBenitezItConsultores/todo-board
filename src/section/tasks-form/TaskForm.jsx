@@ -1,7 +1,8 @@
 import React, { useRef } from "react";
 import style from "./tasksForm.module.css";
 import useStoreTasks from "../../store/manageTasks";
-const TaskForm = () => {
+
+const TaskForm = ({toggleCreateTask}) => {
   const addTasks = useStoreTasks((state) => state.addTasks);
   const tasks = useStoreTasks((state) => state.tasks);
 
@@ -9,7 +10,6 @@ const TaskForm = () => {
 
   const titleRef = useRef(null);
   const descripcionRef = useRef(null);
-  
 
   const handlerAddTasks = (e) => {
     e.preventDefault();
@@ -18,17 +18,22 @@ const TaskForm = () => {
       id: crypto.randomUUID(),
       description: descripcionRef.current.value,
     });
+<<<<<<< HEAD
+    toggleCreateTask();
+=======
     
+>>>>>>> d966203c6acea1767c58d5a013e340248077e843
   };
 
   return (
     <div className={style.masquerade}>
-      <div className={style.mask}/>
+      <div className={style.mask} />
       <div className={style.container}>
         <h2 className={style.popup_Form}>Popup Form</h2>
         <form onSubmit={handlerAddTasks} className={style.container_Popup}>
           <label htmlFor="username">Título:</label>
           <input
+            placeholder="Ingresa el titulo"
             ref={titleRef}
             className={style.title_Popup}
             type="text"
@@ -37,9 +42,26 @@ const TaskForm = () => {
             required
           />
           <label htmlFor="username">Descripcion:</label>
-          <textarea ref={descripcionRef} name="" id="" required></textarea>
+          <textarea
+            placeholder="Agrega aqui las descripción"
+            className={style.description_Popup}
+            ref={descripcionRef}
+            name=""
+            id=""
+            required
+          ></textarea>
 
-          <button type="submit">Agregar Tarea</button>
+          <div className={style.buttons}>
+            <button className={style.open} type="submit">
+              Agregar Tarea
+            </button>
+            <button
+              onClick={toggleCreateTask}
+              className={style.close}
+            >
+              Cerrar
+            </button>
+          </div>
         </form>
       </div>
     </div>
