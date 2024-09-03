@@ -9,10 +9,9 @@ function App() {
   const toogleCreateTask = () => {
     setOpenPopUp(!openPopUp);
   };
-
   return (
     <>
-      {openPopUp && <TaskForm />}
+      {openPopUp && <TaskForm toggleCreateTask={toogleCreateTask} />}
       <ShowTasks setOpenPopUp={setOpenPopUp} />
     </>
   );
