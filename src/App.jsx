@@ -9,11 +9,7 @@ function App() {
     setOpenPopUp(!openPopUp);
   }
 
-  return (
-    <>
-     {openPopUp && <TaskForm />}
-    </>
-  );
+  return <>{openPopUp && <TaskForm toggleCreateTask={toogleCreateTask} />}</>;
 }
 
 export default App;

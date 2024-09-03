@@ -1,7 +1,8 @@
 import React, { useRef } from "react";
 import style from "./tasksForm.module.css";
 import useStoreTasks from "../../store/manageTasks";
-const TaskForm = () => {
+
+const TaskForm = ({toggleCreateTask}) => {
   const addTasks = useStoreTasks((state) => state.addTasks);
   const tasks = useStoreTasks((state) => state.tasks);
 
@@ -17,6 +18,7 @@ const TaskForm = () => {
       id: crypto.randomUUID(),
       description: descripcionRef.current.value,
     });
+    
   };
 
   return (
@@ -46,16 +48,16 @@ const TaskForm = () => {
           ></textarea>
 
           <div className={style.buttons}>
-
-          <button className={style.open} type="submit">
-            Agregar Tarea
-          </button>
-          <button className={style.close} type="submit">
-            Cerrar
-          </button>
-
+            <button className={style.open} type="submit">
+              Agregar Tarea
+            </button>
+            <button
+              onClick={toggleCreateTask}
+              className={style.close}
+            >
+              Cerrar
+            </button>
           </div>
-
         </form>
       </div>
     </div>
