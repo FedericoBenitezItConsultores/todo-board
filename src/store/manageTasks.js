@@ -6,7 +6,7 @@ const useStoreTasks = create(
     (set, get) => ({
       tasks: [],
       addTasks: (newTask) => set(() => ({ tasks: [...get().tasks, newTask] })),
-      editTaks: (newsTasks) => set(() => ({ tasks: newsTasks })),
+      editTaks: (title, description, id) =>set((state) => ({ tasks: state.tasks?.map( (task) => task.id == id ? { description, title, id } : task ) })),
     }),
     {
       name: "TODOS",

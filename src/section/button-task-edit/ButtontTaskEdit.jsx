@@ -2,17 +2,13 @@ import { useState } from "react";
 import useStoreTasks from "../../store/manageTasks";
 import { PencilIcon } from "../../assets/Icons";
 import TaskForm from "../tasks-form/TaskForm";
-export default function ButtontTaskEdit({ id, task }) {
+export default function ButtontTaskEdit({ task }) {
   const [assetEditTask, setAssetEditTask] = useState(false);
   const editTaks = useStoreTasks((state) => state.editTaks);
-  const tasks = useStoreTasks((state) => state.tasks);
 
   const handleEditTaks = (event, { title, description }) => {
     event.preventDefault();
-    const tasksEdited = tasks?.map((task) =>
-      task.id == id ? { description, title, id } : task
-    );
-    editTaks(tasksEdited);
+    editTaks(title, description, task.id);
     setAssetEditTask(!assetEditTask);
   };
 
@@ -22,11 +18,7 @@ export default function ButtontTaskEdit({ id, task }) {
 
   return (
     <>
-      <span
-        onClick={() => {
-          setAssetEditTask(true);
-        }}
-      >
+      <span onClick={toogleCreateTask}>
         <PencilIcon />
       </span>
       {assetEditTask && (
