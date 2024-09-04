@@ -27,7 +27,8 @@
 }
 
 .task_item {
-  min-width: 400px;
+  width: 100%;
+  max-width: 400px;
   padding: 16px;
   border-radius: 8px;
   background-color: #fff;
@@ -35,9 +36,9 @@
   transition: transform 0.3s ease;
 }
 
-.task_item:hover {
+/* .task_item:hover {
   transform: translateY(-5px);
-}
+} */
 
 .task_title {
   font-size: 20px;
@@ -83,7 +84,6 @@
   cursor: pointer;
   font-size: 32px;
   width: 70px;
-  height: 8¿px;
 }
 
 .new_mas:hover {
