@@ -2,16 +2,15 @@ import React from "react";
 import useStoreTasks from "../store/manageTasks";
 import CompletedTasks from "../section/completed-Tasks/completedTasks";
 import style from "./showTasks.module.css";
+import ButtontTaskEdit from "../section/button-task-edit/ButtontTaskEdit";
 
 const ShowTasks = ({ setOpenPopUp }) => {
   const tasks = useStoreTasks((state) => state.tasks);
+
   return (
     <div className={style.task_container}>
       <h2 className={style.title}>Lista de tareas</h2>
-      <li
-        onClick={() => setOpenPopUp(true)}
-        className={`${style.new_mas}`}
-      >
+      <li onClick={() => setOpenPopUp(true)} className={`${style.new_mas}`}>
         +
       </li>
       {tasks.length === 0 ? (
@@ -26,11 +25,10 @@ const ShowTasks = ({ setOpenPopUp }) => {
               <h3 className={style.task_title}>{task.title}</h3>
               <p className={style.task_description}>{task.description}</p>
               < CompletedTasks/>
+              <ButtontTaskEdit task={task} {...task} />
             </li>
 
           ))}
-           
-    
         </ul>
       )}
       <div>

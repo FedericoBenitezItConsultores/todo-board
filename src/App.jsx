@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-import TaskForm from "./section/tasks-form/TaskForm";
 import ShowTasks from "./show-tasks/ShowTasks";
+import CreateTask from "./section/create-task/CreateTask";
 
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
   };
   return (
     <>
-      {openPopUp && <TaskForm toggleCreateTask={toogleCreateTask} />}
+      {openPopUp && <CreateTask toggleCreateTask={toogleCreateTask} />}
       <ShowTasks setOpenPopUp={setOpenPopUp} />
     </>
   );
