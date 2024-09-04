@@ -3,7 +3,7 @@ import useStoreTasks from "../store/manageTasks";
 import CompletedTasks from "../section/completed-Tasks/completedTasks";
 import style from "./showTasks.module.css";
 import ButtontTaskEdit from "../section/button-task-edit/ButtontTaskEdit";
-import DeleteTask from "../section/delete-tasks/DeleteTasks";
+import DeleteTask from "../section/deleteTasks/DeleteTasks";
 
 const ShowTasks = ({ setOpenPopUp }) => {
   const tasks = useStoreTasks((state) => state.tasks);
