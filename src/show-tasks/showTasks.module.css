@@ -1,4 +1,6 @@
 .task_container {
+  
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,9 +19,9 @@
   font-size: 18px;
   color: #777;
 }
-
 .task_list {
   list-style: none;
+  width: 100%;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
@@ -36,9 +38,7 @@
   transition: transform 0.3s ease;
 }
 
-/* .task_item:hover {
-  transform: translateY(-5px);
-} */
+
 
 .task_title {
   font-size: 20px;
@@ -89,4 +89,10 @@
 .new_mas:hover {
   background-color: #bfd8f0;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.tasks_buttons {
+  display: flex;
+  align-items: end;
+  
+
 }

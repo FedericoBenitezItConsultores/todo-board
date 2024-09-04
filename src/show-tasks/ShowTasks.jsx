@@ -3,6 +3,7 @@ import useStoreTasks from "../store/manageTasks";
 import CompletedTasks from "../section/completed-Tasks/completedTasks";
 import style from "./showTasks.module.css";
 import ButtontTaskEdit from "../section/button-task-edit/ButtontTaskEdit";
+import DeleteTask from "../section/deleteTasks/DeleteTasks";
 
 const ShowTasks = ({ setOpenPopUp }) => {
   const tasks = useStoreTasks((state) => state.tasks);
@@ -24,16 +25,16 @@ const ShowTasks = ({ setOpenPopUp }) => {
             >
               <h3 className={style.task_title}>{task.title}</h3>
               <p className={style.task_description}>{task.description}</p>
-              < CompletedTasks/>
-              <ButtontTaskEdit task={task} {...task} />
+              <div className={style.tasks_buttons}>
+                <CompletedTasks />
+                <ButtontTaskEdit task={task} {...task} />
+                <DeleteTask taskId={task.id} />
+              </div>
             </li>
-
           ))}
         </ul>
       )}
-      <div>
-      
-      </div>
+      <div></div>
     </div>
   );
 };
