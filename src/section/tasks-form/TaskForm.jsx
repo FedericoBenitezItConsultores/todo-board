@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import style from "./tasksForm.module.css";
 import useStoreTasks from "../../store/manageTasks";
 
-const TaskForm = ({toggleCreateTask}) => {
+const TaskForm = ({ toggleCreateTask }) => {
   const addTasks = useStoreTasks((state) => state.addTasks);
   const tasks = useStoreTasks((state) => state.tasks);
 
@@ -51,10 +51,7 @@ const TaskForm = ({toggleCreateTask}) => {
             <button className={style.open} type="submit">
               Agregar Tarea
             </button>
-            <button
-              onClick={toggleCreateTask}
-              className={style.close}
-            >
+            <button onClick={toggleCreateTask} className={style.close}>
               Cerrar
             </button>
           </div>
