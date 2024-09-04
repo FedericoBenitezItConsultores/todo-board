@@ -25,7 +25,7 @@ const ShowTasks = ({ setOpenPopUp }) => {
               <h3 className={style.task_title}>{task.title}</h3>
               <p className={style.task_description}>{task.description}</p>
               < CompletedTasks/>
-              <ButtontTaskEdit task={task} {...task} />
+              <ButtontTaskEdit task={task} />
             </li>
 
           ))}
