@@ -1,0 +1,15 @@
+.checked{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+    height: 50px;
+    width: 50px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.checked > img{
+    height: 100%;
+    width: 100%;
+}
