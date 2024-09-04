@@ -7,6 +7,10 @@ const useStoreTasks = create(
       tasks: [],
       addTasks: (newTask) => set(() => ({ tasks: [...get().tasks, newTask] })),
       editTaks: (newsTasks) => set(() => ({ tasks: newsTasks })),
+      deleteTask: (taskId) =>
+        set((state) => ({
+          tasks: state.tasks.filter((task) => task.id !== taskId),
+        })),
     }),
     {
       name: "TODOS",
