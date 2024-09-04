@@ -29,13 +29,10 @@ const ShowTasks = ({ setOpenPopUp }) => {
               <ButtontTaskEdit task={task} {...task} />
               <DeleteTask  taskId={task.id}/>
             </li>
-
           ))}
         </ul>
       )}
-      <div>
-      
-      </div>
+      <div></div>
     </div>
   );
 };

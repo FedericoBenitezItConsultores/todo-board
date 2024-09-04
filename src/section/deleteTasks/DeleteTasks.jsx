@@ -10,9 +10,9 @@ const DeleteTask = ({ taskId }) => {
   };
 
   return (
-    <button onClick={handleDelete} className={style.delete_tasks}>
-      <MdDeleteForever />
-    </button>
+    <label onClick={handleDelete} className={style.delete_tasks}>
+      <MdDeleteForever size={150} />
+    </label>
   );
 };
 export default DeleteTask;

@@ -90,3 +90,7 @@
   background-color: #bfd8f0;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+.Card_Tasks_buttons {
+  display: flex;
+  align-items: center;
+}
